@@ -1,7 +1,10 @@
 const { json } = require('express');
+const cors = require('cors');
 const express = require('express')
 const app = express()
-const { v4:  uuid4 } = require("uuid"); 
+const { v4: uuidv4 } = require('uuid');
+
+app.use(cors());
 
 // middleware for data on post request
 app.use(express.json({extended: false}))
